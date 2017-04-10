@@ -9,11 +9,8 @@ def url_download(url):
     return get_data.content
 
 def process_html(html_data):
-    player_stats = []
-    new_table = html_data.find_all('tr',{'align':'right'})
-
-    for p in player_stats[:20]:
-        name = p.contents[0].get_text()
-    print player_stats
+    print 'Top Players (By Touchdown)'
 
 if __name__ == '__main__':
+    link = 'http://www.cbssports.com/nfl/stats/playersort/nfl/year-2016-season-regular-category-touchdowns'
+    html = url_download(link)
