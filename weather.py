@@ -19,6 +19,6 @@ def process_html(html_data):
         print output.format(row.contents[0].text, row.contents[2].text, row.contents[6].text)
 
 if __name__ == '__main__':
-    link = ''
+    link = 'https://www.wunderground.com/history/airport/KNYC/2015/4/1/MonthlyHistory.html'
     html = url_download(link)
     table = process_html(html)
